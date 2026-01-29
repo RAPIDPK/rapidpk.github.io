@@ -6,10 +6,18 @@
 </head>
 <body>
 
-<header>
-  <h1>Publications</h1>
-  <nav>
+<header class="site-header">
+  <div class="brand">
+    <img src="logo.png" alt="RAPID logo" class="logo">
+    <div class="brand-text">
+      <h1>Publications</h1>
+      <p>Selected peer-reviewed publications from RAPID members</p>
+    </div>
+  </div>
+
+  <nav class="nav">
     <a href="index.html">Home</a>
+    <a href="about.html">About</a>
     <a href="people.html">People</a>
     <a href="research.html">Research</a>
     <a href="activities.html">Activities</a>
@@ -20,37 +28,118 @@
 </header>
 
 <section>
-  <h2>Selected Publications</h2>
-  <p>
-    We share selected publications most relevant to applied pharmacokinetics,
-    pharmacometrics, and individualised dosing.
+  <h2>Selected publications</h2>
+  <p class="small">
+    Auto-sorted (new → old). Update by replacing <code>publications.csv</code>.
   </p>
 
-  <p><strong>Google Scholar:</strong>
-    <a href="https://scholar.google.com/citations?hl=en&user=8h7m6GkAAAAJ" target="_blank" rel="noopener noreferrer">
-      View full profile
-    </a>
-  </p>
+  <div class="table-wrap" style="padding:14px;">
+    <label for="pubSearch" class="small"><strong>Search</strong> (author, drug, journal, keyword):</label><br>
+    <input id="pubSearch" type="text" placeholder="e.g., vancomycin, allopurinol, piperacillin, Pharmaco..."
+      style="width:100%; padding:10px 12px; border-radius:10px; border:1px solid #ddd; margin-top:8px;">
+  </div>
 
-  <h3>Thrombosis & Haemostasis</h3>
-  <ul>
-    <li>(Add selected items here)</li>
-  </ul>
-
-  <h3>Oncology</h3>
-  <ul>
-    <li>(Add selected items here)</li>
-  </ul>
-
-  <h3>Antibiotics</h3>
-  <ul>
-    <li>(Add selected items here)</li>
-  </ul>
+  <div class="table-wrap" style="margin-top:14px;">
+    <table id="pubTable" style="table-layout:auto;">
+      <thead>
+        <tr>
+          <th style="width:90px;">Year</th>
+          <th style="width:150px;">Team</th>
+          <th style="width:110px;">Type</th>
+          <th>Title</th>
+          <th style="width:220px;">Journal</th>
+          <th style="width:110px;">Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="6" class="small">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <footer>
   Centre for Quality Management of Medicines, Faculty of Pharmacy UKM
 </footer>
+
+<script>
+async function loadCSV(path) {
+  const res = await fetch(path, { cache: "no-store" });
+  const text = await res.text();
+  const lines = text.split(/\r?\n/).filter(l => l.trim().length > 0);
+
+  return lines.map(line => {
+    const out = [];
+    let cur = "", inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') inQ = !inQ;
+      else if (ch === ',' && !inQ) { out.push(cur); cur = ""; }
+      else cur += ch;
+    }
+    out.push(cur);
+    return out.map(s => s.replace(/^"|"$/g, "").trim());
+  });
+}
+
+function badge(year) {
+  return `<span class="badge">${year}</span>`;
+}
+
+function makeLinkCell(url) {
+  if (!url) return "";
+  return `<a href="${url}" target="_blank" rel="noopener">DOI</a>`;
+}
+
+let allRows = [];
+
+function render(rows) {
+  const tbody = document.querySelector("#pubTable tbody");
+  tbody.innerHTML = "";
+
+  for (const r of rows) {
+    const [Year, Team, Type, Title, Journal, Link] = r;
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${badge(Year)}</td>
+      <td>${Team}</td>
+      <td>${Type}</td>
+      <td>${Title}</td>
+      <td>${Journal}</td>
+      <td>${makeLinkCell(Link)}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  if (rows.length === 0) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td colspan="6" class="small">No matches. Try another keyword.</td>`;
+    tbody.appendChild(tr);
+  }
+}
+
+function applyFilter() {
+  const q = document.getElementById("pubSearch").value.toLowerCase().trim();
+  if (!q) return render(allRows);
+
+  const filtered = allRows.filter(r => r.join(" ").toLowerCase().includes(q));
+  render(filtered);
+}
+
+(async () => {
+  const rows = await loadCSV("publications.csv");
+  const data = rows.slice(1).map(r => r.slice(0, 6)); // ignore Notes column for display
+
+  // Sort newest -> oldest
+  data.sort((a, b) => Number(b[0]) - Number(a[0]));
+
+  allRows = data;
+  render(allRows);
+
+  document.getElementById("pubSearch").addEventListener("input", applyFilter);
+})();
+</script>
 
 </body>
 </html>

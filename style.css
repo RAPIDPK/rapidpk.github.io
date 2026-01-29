@@ -5,21 +5,80 @@ body {
   color: #111;
 }
 
-header {
+.site-header {
   background: #8A0F1A;
   color: white;
-  padding: 20px;
+  padding: 14px 20px;
 }
 
-nav a {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: 60px;   /* THIS is the key line */
+  width: auto;
+  background: white;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.brand-text p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav a {
   color: white;
-  margin-right: 15px;
+  margin-right: 14px;
   text-decoration: none;
   font-weight: bold;
 }
 
+.nav a:hover {
+  text-decoration: underline;
+}
+
 section {
   padding: 30px;
+  max-width: 1000px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 10px;
+  color: #8A0F1A;
+}
+
+.icon {
+  font-size: 48px;
 }
 
 footer {

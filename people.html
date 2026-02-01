@@ -1,23 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>People - RAPID</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Our People | RAPID</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #222;
+}
+
+header {
+  background: #8b0f1a;
+  color: white;
+  padding: 14px 30px;
+}
+
+header nav a {
+  color: white;
+  margin-right: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.person-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  margin: 0 auto 14px auto;
+  background: #f2f2f2;
+}
+
+.person-photo.small {
+  width: 140px;
+  height: 140px;
+}
+
+.name {
+  font-weight: bold;
+  color: #8b0f1a;
+  margin-top: 8px;
+}
+
+.expertise {
+  font-size: 0.9em;
+  margin-top: 6px;
+}
+
+ul {
+  max-width: 800px;
+  margin: auto;
+  font-size: 0.95em;
+  line-height: 1.7;
+}
+</style>
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="brand">
-    <a href="index.html" class="brand-link">
-      <img src="logo.png" alt="RAPID logo" class="logo">
-    </a>
-    <div class="brand-text">
-      <h1>Our People</h1>
-      <p>RAPID Research Group</p>
-    </div>
-  </div>
-
-  <nav class="nav">
+<header>
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="people.html">People</a>
@@ -28,193 +101,105 @@
 </header>
 
 <section>
-
-  <h2 style="text-align:center;">Core Researchers</h2>
-
-  <div class="grid-2">
-    <div class="person-card">
+  <h2>Core Researchers</h2>
+  <div class="grid">
+    
+    <div class="card">
       <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxOTk5Mg==" target="_blank">
-        <img src="shamin.jpg" alt="Shamin Mohd Saffian" class="person-photo">
+        <img src="shamin.jpg" class="person-photo">
       </a>
-      <h3 class="person-name">
-        <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxOTk5Mg==" target="_blank">
-          Shamin Mohd Saffian
-        </a>
-      </h3>
-      <p class="tags">
+      <div class="name">Shamin Mohd Saffian</div>
+      <div class="expertise">
         Pharmacometrics • Clinical pharmacology • Thrombosis • Oncology • Antibiotics • Coagulation assays
-      </p>
+      </div>
     </div>
 
-    <div class="person-card">
+    <div class="card">
       <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAyMTk5OQ==" target="_blank">
-        <img src="asyikin.jpg" alt="Nor Asyikin Mohd Tahir" class="person-photo">
+        <img src="asyikin.jpg" class="person-photo">
       </a>
-      <h3 class="person-name">
-        <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAyMTk5OQ==" target="_blank">
-          Nor Asyikin Mohd Tahir
-        </a>
-      </h3>
-      <p class="tags">
+      <div class="name">Nor Asyikin Mohd Tahir</div>
+      <div class="expertise">
         Pharmacometrics • Pharmacogenetics • Antibiotics • Translational assay research
-      </p>
+      </div>
     </div>
+
   </div>
-
-  <h2>Affiliated Researchers</h2>
-  <p class="muted">
-    These researchers contribute to RAPID projects through collaborative work in pharmacokinetics,
-    pharmacometrics, pharmacogenetics, and translational research.
-  </p>
-
-  <div class="grid-4">
-    <div class="person-card compact">
-      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMjc2OA==" target="_blank">
-        <img src="noraida.jpg" alt="Dr Noraida Mohamed Shah" class="person-photo small">
-      </a>
-      <h3 class="person-name">
-        <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMjc2OA==" target="_blank">
-          Dr Noraida Mohamed Shah
-        </a>
-      </h3>
-      <p class="tags">
-        Immunoglobulin G PK • Clinical pharmacy practice • Adherence
-      </p>
-    </div>
-
-    <div class="person-card compact">
-      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMzc4Mw==" target="_blank">
-        <img src="adyani.jpg" alt="Dr Adyani Md Redzuan" class="person-photo small">
-      </a>
-      <h3 class="person-name">
-        <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMzc4Mw==" target="_blank">
-          Dr Adyani Md Redzuan
-        </a>
-      </h3>
-      <p class="tags">
-        Digoxin PopPK • Cardiovascular pharmacotherapy • Adherence
-      </p>
-    </div>
-
-    <div class="person-card compact">
-      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMDE4Mg==" target="_blank">
-        <img src="makmor.jpg" alt="Prof. Dr Mohd Makmor Bakry" class="person-photo small">
-      </a>
-      <h3 class="person-name">
-        <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMDE4Mg==" target="_blank">
-          Prof. Dr Mohd Makmor Bakry
-        </a>
-      </h3>
-      <p class="tags">
-        ICU • Antibiotics PK • Pharmacogenetics • Critical care pharmacotherapy
-      </p>
-    </div>
-
-    <div class="person-card compact">
-      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxNzA3Nw==" target="_blank">
-        <img src="farida.jpg" alt="Dr Farida Hanim binti Islahudin" class="person-photo small">
-      </a>
-      <h3 class="person-name">
-        <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxNzA3Nw==" target="_blank">
-          Dr Farida Hanim binti Islahudin
-        </a>
-      </h3>
-      <p class="tags">
-        Clinical pharmacy practice • Pharmacogenetics • Nephrology • Infectious disease
-      </p>
-    </div>
-  </div>
-
-  <h2>Current Research Students</h2>
-  <ul class="clean-list">
-    <li><strong>Toh Chin Chiang (PhD)</strong> — Amikacin population PK in PICU</li>
-    <li><strong>Tuan Fauziah Tuan Roslli (PhD)</strong> — HDMTX population PK in lymphoma</li>
-    <li><strong>Farah Aida binti A. Zairol Azwan (PhD)</strong> — Allopurinol and oxypurinol PK/PD</li>
-    <li><strong>Nazatul Adhwa binti Mohd Rozi (PhD)</strong> — Piperacillin population PK in CRRT</li>
-  </ul>
-
 </section>
 
-<footer>
-  Centre for Quality Management of Medicines, Faculty of Pharmacy UKM
-</footer>
+<section>
+  <h2>Affiliated Researchers</h2>
+  <div class="grid">
 
-<style>
-  .grid-2, .grid-4 {
-    display: grid;
-    gap: 20px;
-    margin-top: 16px;
-  }
+    <div class="card">
+      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMjc2OA==" target="_blank">
+        <img src="noraida.jpg" class="person-photo small">
+      </a>
+      <div class="name">Dr Noraida Mohamed Shah</div>
+      <div class="expertise">
+        Immunoglobulin G PK • Clinical pharmacy practice • Adherence
+      </div>
+    </div>
 
-  .grid-2 { grid-template-columns: repeat(2, 1fr); }
-  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    <div class="card">
+      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMzc4Mw==" target="_blank">
+        <img src="adyani.jpg" class="person-photo small">
+      </a>
+      <div class="name">Dr Adyani Md Redzuan</div>
+      <div class="expertise">
+        Digoxin PopPK • Cardiovascular pharmacotherapy • Adherence
+      </div>
+    </div>
 
-  @media (max-width: 900px) {
-    .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .grid-2, .grid-4 { grid-template-columns: 1fr; }
-  }
+    <div class="card">
+      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxMDE4Mg==" target="_blank">
+        <img src="makmor.jpg" class="person-photo small">
+      </a>
+      <div class="name">Prof. Dr Mohd Makmor Bakry</div>
+      <div class="expertise">
+        ICU • Antibiotics PK • Pharmacogenetics • Critical care pharmacotherapy
+      </div>
+    </div>
 
-  .person-card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    padding: 18px;
-    text-align: center;
-  }
+    <div class="card">
+      <a href="https://ukmsarjana.ukm.my/main/lihat_profil/SzAxNzA3Nw==" target="_blank">
+        <img src="farida.jpg" class="person-photo small">
+      </a>
+      <div class="name">Dr Farida Hanim binti Islahudin</div>
+      <div class="expertise">
+        Clinical pharmacy practice • Pharmacogenetics • Nephrology • Infectious disease
+      </div>
+    </div>
 
-  .person-card.compact { padding: 16px; }
+  </div>
+</section>
 
-  .person-photo {
-    width: 220px;
-    height: 220px;
-    border-radius: 18px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    margin: 0 auto 14px auto;
-  }
+<section>
+  <h2>Current Research Students</h2>
+  <ul>
+    <li><b>Toh Chin Chiang</b> – Amikacin population PK in PICU</li>
+    <li><b>Tuan Fauziah Tuan Roslli</b> – HDMTX population PK in lymphoma</li>
+    <li><b>Farah Aida binti A. Zairol Azwan</b> – Allopurinol and oxypurinol PK/PD</li>
+    <li><b>Nazatul Adhwa binti Mohd Rozi</b> – Piperacillin population PK in CRRT</li>
+  </ul>
+</section>
 
-  .person-photo.small {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-    margin: 0 auto 14px auto;
-    padding: 6px;
-    background: #f2f2f2;
-  }
-
-  .person-name {
-    margin: 6px 0 8px 0;
-    font-size: 18px;
-  }
-
-  .person-name a {
-    color: #7a0d13;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(122,13,19,0.3);
-  }
-
-  .person-name a:hover {
-    border-bottom: 1px solid rgba(122,13,19,0.7);
-  }
-
-  .tags {
-    font-size: 13px;
-    color: #222;
-    line-height: 1.5;
-  }
-
-  .muted { color: #444; }
-
-  .clean-list {
-    line-height: 1.8;
-    max-width: 900px;
-  }
-</style>
+<section>
+  <h2>Past & Supervised Clinical Students (Selected Publications)</h2>
+  <ul>
+    <li>
+      <b>Fann Zi Yin (2025)</b> – Treatment outcomes in MRSA bacteraemia receiving vancomycin.  
+      <i>EJHP</i>. DOI: 10.1136/ejhpharm-2025-004716
+    </li>
+    <li>
+      <b>Farah Waheeda Tajurudin (2024)</b> – Analysis of DOAC prescriptions in AF patients two years post-discharge.
+    </li>
+    <li>
+      <b>Ahmad Salihin Abdullah (2021)</b> – Bleeding and thromboembolic events in NVAF treated with apixaban or rivaroxaban.  
+      <i>Malays J Med Sci</i>. https://doi.org/10.21315/mjms2022.29.2.15
+    </li>
+  </ul>
+</section>
 
 </body>
 </html>

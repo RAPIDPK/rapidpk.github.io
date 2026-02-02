@@ -159,3 +159,50 @@ body{
 
 /* Generic links */
 a{ color: var(--link); }
+
+
+/* =========================
+   PEOPLE PAGE FIX (safe overrides)
+   Paste at END of style.css
+   ========================= */
+
+/* 1) Stop global image rules from breaking avatars */
+img { max-width: 100%; height: auto; }
+
+/* 2) Make ALL people photos perfectly circular and centered
+   Works for both core + affiliated as long as the image is inside .avatar */
+.avatar{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 12px;
+  background: #f2f2f2;
+  display: grid;
+  place-items: center;
+  border: 8px solid rgba(0,0,0,0.04);
+}
+
+.avatar img{
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: var(--pos, 50% 50%) !important;
+  display: block;
+}
+
+/* 3) If any cards are forcing weird image sizes, neutralize */
+.people-card img,
+.card img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4) Make People layout stable on mobile */
+.people-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  align-items: start;
+}

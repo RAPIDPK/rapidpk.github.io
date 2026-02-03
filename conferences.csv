@@ -1,14 +1,14 @@
 Year,Presenter,Conference,Location,Title
-2020,Shamin,Pharmacometrics Japan Conference, Keio University, Japan , Identifying Systematic Bias In Model Predictions 
-2020,Nor Asyikin,Pharmacometrics Japan Conference, Keio University, Japan , Population Pharmacokinetic Model Of Vancomycin Based On Cystatin C In Multi-Ethnic Malaysian Patients 
-2021,Lee Jian Lynn,Population Approach Group Australia and New Zealand, Sydney, Australia , Impact Of Genetic and Non-Genetic Factors On The Pharmacokinetics Of Intravenous Immunoglobulin In Patients With Predominantly Antibody Deficiencies In Malaysia 
-2022, Nor Asyikin, MONASH INITIATE, Malaysia, Trends of Pharmacogenomic Studies in Malaysia: A Systematic Review
-2022,Shamin,World Conference of Pharmacometrics, Cape Town, South Africa , Population Pharmacokinetic Modelling Of Intravenous Immunoglobulin In Patients With Immune System Disorders 
-2023,Shamin,Asian Pharmacometrics Conference,Virtual, Pharmacokinetic Model Of Immunoglobulin G In Patients Treated For Various Immune System Disorders 
-2023,Ng Jia Wei,International Conference on Pharmaceutical Sciences, Kuala Lumpur , The Peak and Trough Concentrations of Dabigatran in Adult Patients 
-2025,Shamin,IATDMCT,Singapore, Dabigatran Trough Concentrations: Should We Monitor? 
-2025,Shamin,IATDMCT,Singapore, Genetic Variants And Oxypurinol Levels: Investigating Allopurinol Response In Gout 
-2025,Shamin,RAPTDM,Penang, Monitoring Methotrexate Therapy: Predicting Risk Delayed Elimination In Non-Hodgkin Lymphoma 
-2025,Toh Chin Chiang,RAPTDM,Penang, Amikacin In Critically Ill Paediatric Patients: A Pharmacokinetics Analysis 
-2025,Tuan Fauziah Tuan Roslli,Malaysian Haematology Society National Meeting,Penang, Optimizing Hematology Care: Mitigating Risks Of Delayed Methotrexate Elimination In Non-Hodgkin Lymphoma 
-2025,Toh Chin Chiang, IATDMCT,Singapore, Amikacin in critically ill paediatric patients: A pharmacokinetics analysis
+2020,Shamin,Pharmacometrics Japan Conference,"Keio University Japan","Identifying Systematic Bias In Model Predictions"
+2020,Nor Asyikin,Pharmacometrics Japan Conference,"Keio University Japan","Population Pharmacokinetic Model Of Vancomycin Based On Cystatin C In Multi-Ethnic Malaysian Patients"
+2021,Lee Jian Lynn,Population Approach Group Australia and New Zealand,"Sydney Australia","Impact Of Genetic and Non-Genetic Factors On The Pharmacokinetics Of Intravenous Immunoglobulin In Patients With Predominantly Antibody Deficiencies In Malaysia"
+2022, Nor Asyikin, MONASH INITIATE, "Trends of Pharmacogenomic Studies in Malaysia: A Systematic Review"
+2022,Shamin,World Conference of Pharmacometrics,"Cape Town South Africa","Population Pharmacokinetic Modelling Of Intravenous Immunoglobulin In Patients With Immune System Disorders"
+2023,Shamin,Asian Pharmacometrics Conference,Virtual,"Pharmacokinetic Model Of Immunoglobulin G In Patients Treated For Various Immune System Disorders"
+2023,Ng Jia Wei,International Conference on Pharmaceutical Sciences,"Kuala Lumpur","The Peak and Trough Concentrations of Dabigatran in Adult Patients"
+2025,Shamin,IATDMCT,Singapore,"Dabigatran Trough Concentrations: Should We Monitor?"
+2025,Shamin,IATDMCT,Singapore,"Genetic Variants And Oxypurinol Levels: Investigating Allopurinol Response In Gout"
+2025,Toh Chin Chiang,IATDMCT,Singapore, "Amikacin in critically ill paediatric patients: A pharmacokinetics analysis"
+2025,Shamin,RAPTDM,Penang,"Monitoring Methotrexate Therapy: Predicting Risk Delayed Elimination In Non-Hodgkin Lymphoma"
+2025,Toh Chin Chiang,RAPTDM,Penang,"Amikacin In Critically Ill Paediatric Patients: A Pharmacokinetics Analysis"
+2025,Tuan Fauziah Tuan Roslli,Malaysian Haematology Society National Meeting,Penang,"Optimizing Hematology Care: Mitigating Risks Of Delayed Methotrexate Elimination In Non-Hodgkin Lymphoma"

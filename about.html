@@ -1,8 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - RAPID</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Internal styles for consistency */
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: #8A0F1A;
+      color: white;
+      padding: 14px 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-link { display: inline-block; }
+
+    .logo {
+      height: 54px;
+      width: auto;
+      background: white;
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text p {
+      margin: 4px 0 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* NAV */
+    .nav {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .nav a:hover { text-decoration: underline; }
+
+    /* LAYOUT */
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #8A0F1A;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    /* TWO COLUMN LAYOUT */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr; /* Text gets slightly more space */
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ABOUT LOGO (The new addition) */
+    .about-logo {
+      width: 160px; /* Nice prominent size */
+      height: auto;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    /* CARDS & IMAGES */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #8A0F1A;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .responsive-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* MAP STYLING */
+    .map-container iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+    @media (max-width: 900px) {
+      .two-col { grid-template-columns: 1fr; gap: 30px; }
+      .brand-text h1 { font-size: 22px; }
+      section { padding: 30px 15px; }
+      
+      /* Center the logo on mobile */
+      .about-logo { margin: 0 auto 20px auto; }
+      .two-col div:first-child { text-align: center; }
+      .two-col div:first-child p { text-align: left; } /* Keep paragraphs readable */
+    }
+  </style>
 </head>
 <body>
 
@@ -28,8 +176,9 @@
 </header>
 
 <section class="two-col">
-
   <div>
+    <img src="logo.png" alt="RAPID Logo Large" class="about-logo">
+    
     <h2>Who we are</h2>
 
     <p>
@@ -53,36 +202,36 @@
 
   <div class="card">
     <h3>Group photo</h3>
-    <img src="group.jpg" alt="RAPID group photo" style="width:100%; border-radius:10px;">
+    <img src="group.jpg" alt="RAPID group photo" class="responsive-img">
   </div>
-
 </section>
 
 <section>
   <h2>What we do</h2>
-
-  <div class="card" style="text-align:center;">
-    <img src="whatwedo.jpg" alt="RAPID research overview" style="width:100%; max-width:900px; border-radius:12px;">
+  <div class="card" style="padding: 10px;">
+    <img src="whatwedo.jpg" alt="RAPID research overview" class="responsive-img">
   </div>
 </section>
 
-<section>
-  <h2>Where we are based</h2>
-
-  <p>
-    Centre for Quality Management of Medicines (CQMM)<br>
-    Faculty of Pharmacy<br>
-    Universiti Kebangsaan Malaysia (UKM)<br>
-    Kuala Lumpur, Malaysia
-  </p>
-
-  <iframe
-    src="https://www.google.com/maps?q=Faculty%20of%20Pharmacy%20UKM&output=embed"
-    width="100%"
-    height="350"
-    style="border:0; border-radius:10px;"
-    loading="lazy">
-  </iframe>
+<section class="two-col">
+  <div>
+    <h2>Where we are based</h2>
+    <p style="font-size: 1.1rem; line-height: 1.8;">
+      <strong>Centre for Quality Management of Medicines (CQMM)</strong><br>
+      Faculty of Pharmacy<br>
+      Universiti Kebangsaan Malaysia (UKM)<br>
+      Kuala Lumpur, Malaysia
+    </p>
+  </div>
+  
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7850238386624!2d101.70887167588147!3d3.151246253139366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362b95c3459d%3A0x6280b3296c651e73!2sFaculty%20of%20Pharmacy%20UKM!5e0!3m2!1sen!2smy!4v1709400000000!5m2!1sen!2smy"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 </section>
 
 <footer>

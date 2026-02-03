@@ -1,8 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RAPID Research Group</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Internal styles to guarantee layout works immediately */
+    
+    /* Clean, modern default font */
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    .site-header {
+      background: #8A0F1A;
+      color: white;
+      padding: 14px 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-link { display: inline-block; }
+
+    .logo {
+      height: 54px;
+      width: auto;
+      background: white;
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text p {
+      margin: 4px 0 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .nav a:hover { text-decoration: underline; }
+
+    /* LAYOUT CONTAINERS */
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #8A0F1A;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* HERO SECTION SPECIFIC */
+    .hero {
+      text-align: center;
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 60px 20px;
+    }
+    .hero h2 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* CARD GRID SYSTEM */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 Columns on Desktop */
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      height: 100%; /* Makes cards equal height */
+      box-sizing: border-box;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin: 12px 0 8px 0;
+      color: #8A0F1A;
+      font-size: 1.2rem;
+    }
+
+    .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    /* LINKS */
+    .card a {
+      color: #8A0F1A;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE RESPONSIVENESS */
+    @media (max-width: 900px) {
+      /* Stack Grid to 1 column */
+      .cards { grid-template-columns: 1fr; }
+      
+      /* Adjust font sizes */
+      .brand-text h1 { font-size: 22px; }
+      .hero h2 { font-size: 1.8rem; }
+      
+      /* Adjust spacing */
+      section { padding: 30px 18px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -63,7 +235,6 @@
 </section>
 
 <section>
- <section>
   <h2>What we bring</h2>
 
   <div class="cards">
@@ -74,7 +245,7 @@
         Population PK, PKPD, and pharmacometric modelling to understand variability,
         predict exposure, and support dose optimisation.
       </p>
-      <p class="small">
+      <p class="small" style="margin-top:10px; border-top:1px solid #eee; padding-top:8px;">
         Model-informed decisions grounded in real clinical data.
       </p>
     </div>
@@ -86,7 +257,7 @@
         Integrating genetic and non-genetic factors to explain inter-individual
         variability in drug exposure and response.
       </p>
-      <p class="small">
+      <p class="small" style="margin-top:10px; border-top:1px solid #eee; padding-top:8px;">
         Translating genotype into clinically meaningful dosing insights.
       </p>
     </div>
@@ -98,15 +269,14 @@
         Quantification of drug concentrations and biomarkers using validated
         HPLC and coagulation assays.
       </p>
-      <p class="small">
+      <p class="small" style="margin-top:10px; border-top:1px solid #eee; padding-top:8px;">
         Linking measured exposure to models and clinical outcomes.
       </p>
     </div>
   </div>
 </section>
 
-
-<section>
+<section style="background-color: #f8f9fa; border-top: 1px solid #e9ecef;">
   <h2>Quick links</h2>
   <div class="cards">
     <div class="card">
